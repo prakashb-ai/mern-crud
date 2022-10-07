@@ -30,7 +30,7 @@ router.get('/api/details',async(req,res)=>{
   
 })
 
-router.put('/:id',async(req,res)=>{
+router.put('/update/:id',async(req,res)=>{
     const update_data = await Crud.findByIdAndUpdate(req.params.id);
     res.send(update_data)
     if(!update_data){
